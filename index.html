@@ -4,27 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Double Navbar</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="interests.html">Interests</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Welcome to My Website</h1>
-        <p>This is the home page content.</p>
-    </main>
+    <div id="main-navbar" class="main-navbar">
+        <ul class="nav-content">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
+    <div id="lower-navbar" class="lower-navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to My Page</h1>
+        <p>Scroll down to see the navbar behavior.</p>
+        <p>Keep scrolling for more content...</p>
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>

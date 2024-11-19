@@ -1,0 +1,80 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 2000px; /* For scroll effect */
+}
+
+ul {
+  display: flex;      /* Makes the list a flex container */
+  list-style: none;   /* Removes default list styling */
+  padding: 0;         /* Removes default padding */
+  margin: 0;          /* Removes default margin */
+}
+
+.main-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 1vh 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.lower-navbar {
+  position: fixed;
+  bottom: 4vh;
+  left: 50%;
+  height: 3rem;
+  width: 25rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 1vh 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%) translateY(100%) scale(0.8); /* Center horizontally */
+  opacity: 1;
+  z-index: 999;
+  border-radius: 48px;
+  transition: .2s;
+  bottom: 0;
+}
+
+.lower-navbar.visible {
+  transform:  translateX(-50%) translateY(0);
+  bottom: 4vh; 
+}
+
+.nav-content a, .lower-navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+.nav-content a:hover, .lower-navbar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 20px;
+  background: #f4f4f4;
+  height: 2000px;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}
