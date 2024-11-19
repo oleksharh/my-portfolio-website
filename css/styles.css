@@ -3,11 +3,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #333;
 }
 
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../assets/fonts/BebasNeue.ttf') format('truetype'); /* Update the path if necessary */
+  font-weight: bolder;
+  font-style: normal;
+}
+
+
 body {
-  font-family: Neuemontreal, sans-serif;
-  height: 2000px; /* For scroll effect */
+  font-family: 'BebasNeue', sans-serif;
+  color: #333;
+  height: 2000px;
 }
 
 ul {
@@ -22,14 +32,15 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  height: 4rem;
+  background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   padding: 1vh 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  outline: 2px solid black;
+  outline: 2px solid #333;;
 }
 
 
@@ -39,7 +50,7 @@ ul {
   left: 50%;
   height: 3rem;
   width: 25rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   padding: 1vh 2vw;
   display: flex;
@@ -50,7 +61,9 @@ ul {
   z-index: 999;
   transition: .2s;
   bottom: 0;
+  outline: 2px solid black;
 }
+
 
 .lower-navbar.visible {
   transform:  translateX(-50%) translateY(0);
@@ -58,23 +71,25 @@ ul {
 }
 
 .nav-content a, .lower-navbar a {
-  color: white;
+  color: #333;;
   text-decoration: none;
   font-weight: bold;
   margin: 0 15px;
 }
 
 li a {
-  color: white;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: bold;
   margin: 0 15px;
-  outline: 2px solid red; /* Outline style */
   padding: 5px; /* Optional: Add padding for better focus visibility */
 }
 
+li a:hover {
+  color: red; /* Ensure red color on hover too */
+}
+
 li a:focus {
-  outline: 3px solid blue; /* Highlight when focused */
+  color: blue; /* Highlight when focused */
 }
 
 .nav-content a:hover, .lower-navbar a:hover {
@@ -90,4 +105,49 @@ li a:focus {
 h1 {
   text-align: center;
   margin: 50px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Space between content and image */
+  align-items: center; /* Align items vertically */
+  padding: 10px; /* Add space inside the grid's outline */
+  margin:  1rem; /* Space around the grid for better visibility */
+  margin-top: 5rem;
+  overflow: hidden; /* Ensure no content overflows */
+}
+  
+/* @media (min-width: 992px) {
+  .header-content {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-image {
+    width: 30%;
+  }
+} */
+
+.hero-div {
+  flex: 0 1 auto; /* Take up available space */
+  /* margin-right: 2rem; */
+  margin: 1rem;
+}
+
+.hero-text {
+  flex: 0 1 auto; /* Take up available space */
+  font-size: 8vw;
+  text-align: left;
+}
+
+.header-image {
+  flex: 0 0 30%; /* Ensure this section takes up 30% of the width */
+  max-width: 30%; /* Prevent it from growing larger */
+}
+
+.header-image img {
+  max-width: 100%; /* Image adapts to container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline spacing issues */
 }
