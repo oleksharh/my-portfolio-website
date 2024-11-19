@@ -1,4 +1,8 @@
 /* Basic reset */
+:root {
+  font-size: 32px; /* This is typically the default, but can be adjusted */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,8 +27,6 @@ body {
 ul {
   display: flex;      /* Makes the list a flex container */
   list-style: none;   /* Removes default list styling */
-  padding: 0;         /* Removes default padding */
-  margin: 0;          /* Removes default margin */
 }
 
 .main-navbar {
@@ -32,15 +34,14 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   padding: 1vh 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  outline: 2px solid #333;;
+  outline: 2px solid #333;
 }
 
 
@@ -49,7 +50,7 @@ ul {
   bottom: 4vh;
   left: 50%;
   height: 3rem;
-  width: 25rem;
+  width: auto;
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   padding: 1vh 2vw;
@@ -70,17 +71,17 @@ ul {
   bottom: 4vh; 
 }
 
-.nav-content a, .lower-navbar a {
+.navbar__links a {
   color: #333;;
   text-decoration: none;
   font-weight: bold;
-  margin: 0 15px;
+  margin: 0 1rem;
 }
 
 li a {
   text-decoration: none !important;
   font-weight: bold;
-  margin: 0 15px;
+  margin: 0 ;
   padding: 5px; /* Optional: Add padding for better focus visibility */
 }
 
@@ -92,7 +93,7 @@ li a:focus {
   color: blue; /* Highlight when focused */
 }
 
-.nav-content a:hover, .lower-navbar a:hover {
+.navbar__links a:hover {
   text-decoration: underline;
 }
 
@@ -110,43 +111,44 @@ h1 {
 .header {
   display: flex;
   justify-content: space-between; /* Space between content and image */
-  align-items: center; /* Align items vertically */
   padding: 10px; /* Add space inside the grid's outline */
   margin:  1rem; /* Space around the grid for better visibility */
   margin-top: 5rem;
   overflow: hidden; /* Ensure no content overflows */
+  margin: 5rem 1rem 1rem 1rem;
 }
   
-/* @media (min-width: 992px) {
-  .header-content {
-    width: 70%;
-  }
-}
 
-@media (min-width: 992px) {
-  .header-image {
-    width: 30%;
-  }
-} */
-
-.hero-div {
-  flex: 0 1 auto; /* Take up available space */
+.header__hero {
+  flex: 1; /* Take up available space */
   /* margin-right: 2rem; */
   margin: 1rem;
+  align-items: center;
+  display: flex;
 }
 
-.hero-text {
-  flex: 0 1 auto; /* Take up available space */
-  font-size: 8vw;
+.header__hero-text {
+  display: inline-block;
+  font-size: 7vw;
   text-align: left;
 }
 
-.header-image {
-  flex: 0 0 30%; /* Ensure this section takes up 30% of the width */
-  max-width: 30%; /* Prevent it from growing larger */
+.header__separator  {
+  width: 2px;
+  background-color: #333;
+  margin: 0 1rem;
 }
 
-.header-image img {
+.header__image {
+  flex: 0 0 25%; /* Ensure this section takes up 30% of the width */
+  max-width: 25%; /* Prevent it from growing larger */
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__image  img {
   max-width: 100%; /* Image adapts to container width */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any inline spacing issues */
