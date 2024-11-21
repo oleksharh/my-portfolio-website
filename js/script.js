@@ -78,13 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let lastScrollY = window.scrollY;
-    const threshold = 100;
+    const threshold = 80;
 
     lowerNavbar.classList.remove('visible');
 
     // Throttled scroll event listener
     let isThrottled = false;
-    const throttleDuration = 100;
+    const throttleDuration = 80;
 
     window.addEventListener('scroll', () => {
         if (isThrottled) return;
