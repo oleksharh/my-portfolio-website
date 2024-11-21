@@ -1,12 +1,15 @@
 @import 'components/navbars.css';
 @import 'components/header-section.css';
 @import 'components/variables.css';
+@import 'components/about-section.css';
 
 body {
     font-family: 'BebasNeue', sans-serif;
     color: var(--main-text-color);
     background-color: var(--main-bg-color);
-    height: 2000px;
+    margin: 0;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
 }
 
 

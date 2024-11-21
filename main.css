@@ -2,3 +2,28 @@
 @import 'css/fonts.css';
 @import 'css/presets.css';
 @import 'css/components.css';
+
+
+/* Styling for the theme toggle button */
+.theme-toggler {
+    background-color: transparent;
+    border: none;
+    color: var(--main-text-color);
+    text-decoration: none; /* Ensure no underline on the button */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: .2s transform ease-in-out;
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+/* Hover effect for theme button */
+.theme-toggler:hover {
+    /* transform: scale(1.2); */
+    color: red;
+}
+
+/* Focus effect for theme button */
+.theme-toggler:focus {
+    color: blue; /* Add a focus outline for better accessibility */
+}
