@@ -1,0 +1,12 @@
+:root {
+    font-size: 32px;
+    --main-bg-color: #fffffa;
+    --main-text-color: #333333;
+    --main-navbar-color: rgba(0, 0, 0, 0);
+}
+
+.dark_mode{
+    --main-bg-color: #333333;
+    --main-text-color: #fffffa;
+    --main-navbar-color: rgba(0, 0, 0, 0);
+}

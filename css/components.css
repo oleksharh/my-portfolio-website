@@ -1,0 +1,16 @@
+@import 'components/navbars.css';
+@import 'components/header-section.css';
+@import 'components/variables.css';
+
+body {
+    font-family: 'BebasNeue', sans-serif;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    height: 2000px;
+}
+
+
+ul {
+    display: flex;      /* Makes the list a flex container */
+    list-style: none;   /* Removes default list styling */
+}

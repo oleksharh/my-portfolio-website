@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../assets/fonts/BebasNeue.ttf') format('truetype'); /* Update the path if necessary */
+    font-weight: bolder;
+    font-style: normal;
+  }

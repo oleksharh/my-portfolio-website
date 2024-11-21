@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between content and image */
+    padding: 10px; /* Add space inside the grid's outline */
+    margin:  1rem; /* Space around the grid for better visibility */
+    margin-top: 5rem;
+    overflow: hidden; /* Ensure no content overflows */
+    margin: 5rem 1rem 1rem 1rem;
+  }
+    
+  
+  .header__hero {
+    flex: 1; /* Take up available space */
+    /* margin-right: 2rem; */
+    margin: 1rem;
+    align-items: center;
+    display: flex;
+  }
+  
+  .header__hero-text {
+    display: inline-block;
+    font-size: 7vw;
+    text-align: left;
+  }
+  
+  .header__separator  {
+    width: 2px;
+    background-color: var(--main-text-color);
+    margin: 0 1rem;
+  }
+  
+  .header__image {
+    flex: 0 0 25%; /* Ensure this section takes up 30% of the width */
+    max-width: 25%; /* Prevent it from growing larger */
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header__image  img {
+    max-width: 100%; /* Image adapts to container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing issues */
+  }
+  
