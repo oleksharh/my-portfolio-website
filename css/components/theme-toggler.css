@@ -1,0 +1,28 @@
+@import '../variables.css';
+
+/* Styling for the theme toggle button */
+.theme-toggler {
+    background-color: transparent;
+    border: none;
+    color: var(--main-text-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s transform ease-in-out;
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 1rem;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+    padding: 5px;
+}
+
+/* Hover effect for theme button */
+.theme-toggler:hover {
+    transform: scale(1.2);
+    /* color: red; */
+}
+
+/* Focus effect for theme button */
+.theme-toggler:focus {
+    color: yellow;
+}

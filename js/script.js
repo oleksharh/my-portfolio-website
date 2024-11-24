@@ -1,71 +1,3 @@
-// const lowerNavbar = document.getElementById('lower-navbar');
-
-// let lastScrollY = window.scrollY;
-// const threshold = 100;
-
-// lowerNavbar.classList.remove('visible');
-
-// // Add scroll event listener
-// window.addEventListener('scroll', () => {
-//     const currentScrollY = window.scrollY;
-
-//     if (currentScrollY > lastScrollY) {
-//         // Scrolling down: hide main navbar, show lower navbar
-//         lowerNavbar.classList.add('visible');
-//     } else {
-//         // Scrolling up: hide lower navbar, show main navbar
-//         if (currentScrollY <= threshold) {
-//             // If scroll position is within the threshold, show the main navbar
-//             lowerNavbar.classList.remove('visible');
-//         } else {
-//             // If the user is further down (but not at the top), keep both hidden
-//             lowerNavbar.classList.add('visible');
-//         }
-//     }
-
-//     lastScrollY = currentScrollY;
-// });
-
-
-// export function themeToggle() {
-//     const themeToggler = document.getElementById('theme-toggler');
-//     const darkIcon = document.getElementById('dark-icon');
-//     const lightIcon = document.getElementById('light-icon');
-
-//     function updateIcons() {
-//         if (document.body.classList.contains('dark_mode')) {
-//             darkIcon.style.display = 'inline';
-//             lightIcon.style.display = 'none';
-//         } else {
-//             darkIcon.style.display = 'none';
-//             lightIcon.style.display = 'inline';
-//         }
-//     }
-
-//     const savedTheme = localStorage.getItem('theme');
-//     if (savedTheme === 'dark') {
-//         document.body.classList.add('dark_mode');
-//     }
-//     updateIcons();
-
-//     themeToggler.addEventListener('click', () => {
-//         document.body.classList.toggle('dark_mode');
-
-//         const currentTheme = document.body.classList.contains('dark_mode') ? 'dark' : 'light';
-//         localStorage.setItem('theme', currentTheme);
-
-//         updateIcons();
-//     });
-// }
-
-
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     themeToggle();
-// });
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const lowerNavbar = document.getElementById('lower-navbar');
     const themeTogglerMain = document.getElementById('theme-toggler-main');
@@ -124,4 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme toggle for both main and lower navbar
     toggleTheme(themeTogglerMain);
     toggleTheme(themeTogglerLower);
+});
+
+const currentPage = window.location.pathname.split("/").pop(); // e.g., "index.html"
+
+// Select all navbar links
+const navLinks = document.querySelectorAll(".navbar__links a");
+console.log(navLinks);
+
+// Loop through links and hide the matching one
+navLinks.forEach(link => {
+    console.log(link.getAttribute("href"), currentPage);
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("muted"); // Hide the corresponding button
+
+        link.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent navigation
+            console.log("Link is blocked.");
+        });
+    }
 });

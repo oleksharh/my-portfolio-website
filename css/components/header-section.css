@@ -13,6 +13,7 @@
     flex: 1; /* Take up available space */
     /* margin-right: 2rem; */
     margin: 1rem;
+    align-items: flex-start;
     align-items: center;
     display: flex;
   }
