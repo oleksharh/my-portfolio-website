@@ -1,7 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Fetch and append the template content to both navbars
+    const templateContent = document.querySelector('#navbar-template').content;
+
+    const mainNavbar = document.getElementById('main-navbar');
     const lowerNavbar = document.getElementById('lower-navbar');
+
+    if (mainNavbar) {
+        const mainNavbarContent = templateContent.cloneNode(true);
+        const mainThemeToggler = mainNavbarContent.querySelector('.navbar__theme-toggler');
+        mainThemeToggler.id = 'theme-toggler-main'; // Assign a unique ID
+        mainNavbar.appendChild(mainNavbarContent);
+    }
+
+    if (lowerNavbar) {
+        const lowerNavbarContent = templateContent.cloneNode(true);
+        const lowerThemeToggler = lowerNavbarContent.querySelector('.navbar__theme-toggler');
+        lowerThemeToggler.id = 'theme-toggler-lower'; // Assign a unique ID
+        lowerNavbar.appendChild(lowerNavbarContent);
+    }
+
+    // Fetch the theme togglers after appending the content
     const themeTogglerMain = document.getElementById('theme-toggler-main');
-    const themeTogglerLower = document.getElementById('theme-toggler-lower'); // Added the lower navbar theme toggler
+    const themeTogglerLower = document.getElementById('theme-toggler-lower');
+
+
 
     // Check if the required elements exist in the DOM
     if (!lowerNavbar || !themeTogglerMain || !themeTogglerLower) {
@@ -56,23 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme toggle for both main and lower navbar
     toggleTheme(themeTogglerMain);
     toggleTheme(themeTogglerLower);
-});
 
-const currentPage = window.location.pathname.split("/").pop(); // e.g., "index.html"
+    // Get the current page from the URL
+    const currentPage = window.location.pathname.split("/").pop(); // e.g., "index.html"
 
-// Select all navbar links
-const navLinks = document.querySelectorAll(".navbar__links a");
-console.log(navLinks);
+    // Select navbar links AFTER appending template content
+    const navLinks = document.querySelectorAll(".navbar__links a");
+    console.log(navLinks);
 
-// Loop through links and hide the matching one
-navLinks.forEach(link => {
-    console.log(link.getAttribute("href"), currentPage);
-    if (link.getAttribute("href") === currentPage) {
-        link.classList.add("muted"); // Hide the corresponding button
+    // Loop through links and hide the matching one
+    navLinks.forEach(link => {
+        console.log(link.getAttribute("href"), currentPage);
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("muted"); // Hide the corresponding button
 
-        link.addEventListener("click", (event) => {
-            event.preventDefault(); // Prevent navigation
-            console.log("Link is blocked.");
-        });
-    }
+            link.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent navigation
+                console.log("Link is blocked.");
+            });
+        }
+    });
 });

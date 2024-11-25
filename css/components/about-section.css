@@ -7,10 +7,10 @@
     flex-direction: column;
 }
 
-.about-text {
+.about-section__text {
     font-weight: 100;
 }
 
-.about-header {
+.about-section__header {
     padding-bottom: 0.8rem;
 }

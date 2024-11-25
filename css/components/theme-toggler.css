@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 /* Styling for the theme toggle button */
-.theme-toggler {
+.navbar__theme-toggler   {
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
@@ -17,12 +17,6 @@
 }
 
 /* Hover effect for theme button */
-.theme-toggler:hover {
+.navbar__theme-toggler:hover {
     transform: scale(1.2);
-    /* color: red; */
-}
-
-/* Focus effect for theme button */
-.theme-toggler:focus {
-    color: yellow;
 }

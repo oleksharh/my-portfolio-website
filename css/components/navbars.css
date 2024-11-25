@@ -16,14 +16,14 @@
 }
 
 /* Specific styles for main navbar */
-.main-navbar {
+.navbar--main {
   top: 0;
   left: 0;
   width: 100%;
 }
 
 /* Specific styles for lower navbar */
-.lower-navbar {
+.navbar--lower {
   position: fixed;
   bottom: 4vh;
   left: 50%;
@@ -35,7 +35,7 @@
 }
   
   
-  .lower-navbar.visible {
+  .navbar--lower.visible {
     transform:  translateX(-50%) translateY(0);
     bottom: 4vh; 
   }
@@ -72,10 +72,6 @@
   li a:hover {
     transform: scale(1.2);
     /* color: red; */
-  }
-  
-  li a:focus {
-    color: yellow;
   }
   
   .navbar__links a:hover {
