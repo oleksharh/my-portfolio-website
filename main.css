@@ -8,11 +8,8 @@
 #projects-section {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     justify-content: center;
     align-items: center;
-    /* display: flex; */
-    /* justify-content: space-between; */
     padding: 1rem;
     overflow: hidden;
     margin: 5rem 1rem 1rem 1rem;
@@ -22,7 +19,8 @@
 .project {
     display: flex;
     flex-direction: row;
-    padding: 15px;
+    margin: 1rem;
+    padding: 1rem;
     width: auto; /* Ensure all projects take up equal width */
     outline: 2px solid var(--main-text-color);
     transition: transform 0.2s;
@@ -37,12 +35,20 @@
 .project h3 {
     margin: 0 0 10px;
     font-size: var(--font-size-large);
+    width: auto;
 }
 
 .project p {
     margin: 0 0 10px;
     font-size: 14px;
+    width: auto;
     /* color: #555; */
+}
+
+.project div {
+    display: flex;
+    flex-direction: column;
+    width: auto;
 }
 
 .project img {
