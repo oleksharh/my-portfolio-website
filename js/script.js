@@ -104,44 +104,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const projects = document.querySelectorAll('.project');
-const overlay = document.getElementById('overlay');
-const closeButton = document.getElementById('close-button');
-const detailsTitle = document.getElementById('details-title');
-const detailsStack = document.getElementById('details-stack');
-const detailsDescription = document.getElementById('details-description');
-const detailsImage = document.getElementById('details-image');
+document.querySelectorAll('.project').forEach(project => {
+    project.addEventListener('click', function () {
+        const projectLink = project.getAttribute('data-link');
+        if (projectLink) {
+            window.open(projectLink, 'www.google.com');  // Open external link in a new tab
+        }
+    });
+});
 
-function showProjectDetails(event) {
-    const project = event.currentTarget;
+window.addEventListener('load', function () {
+    const projects = document.querySelectorAll('.project');
+    let maxWidth = 0;
 
-    // Populate details box with project details
-    detailsTitle.textContent = project.querySelector('h3').textContent;
-    detailsStack.textContent = project.querySelector('p').textContent;
-    detailsDescription.textContent = project.getAttribute('data-details');
+    // Find the maximum width of the projects
+    projects.forEach(project => {
+        const projectWidth = project.offsetWidth;
+        if (projectWidth > maxWidth) {
+            maxWidth = projectWidth;
+        }
+    });
 
-    // Handle the project image
-    const projectImage = project.querySelector('img');
-    if (projectImage) {
-        detailsImage.src = projectImage.src; // Copy project image to overlay
-        detailsImage.style.display = 'block';
-    } else {
-        detailsImage.style.display = 'none'; // Hide image if not available
-    }
-
-    // Show overlay
-    overlay.style.display = 'flex';
-}
-
-function closeOverlay() {
-    overlay.style.display = 'none'; // Hide overlay when close button is clicked
-}
-
-// Attach click events
-projects.forEach(project => project.addEventListener('click', showProjectDetails));
-closeButton.addEventListener('click', closeOverlay);
-
-// Close overlay when clicking outside the details box
-overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeOverlay();
+    // Apply the maximum width to all projects
+    projects.forEach(project => {
+        project.style.width = `${maxWidth}px`;
+    });
 });
