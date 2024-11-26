@@ -25,7 +25,10 @@
     <nav id="main-navbar" class="navbar navbar--main"></nav>
     <nav id="lower-navbar" class="navbar navbar--lower"></nav>
 
-    <header class="header">
+
+
+
+    <!-- <header class="header">
         <div class="header__hero">
             <h1 class="header__hero-text">PROJECTS PAGE</h1>
         </div>
@@ -34,7 +37,36 @@
             <img class="header__image-content" src="assets/images/main_image.JPG"
                 alt="A profile picture of Alex Sharhorodskyi">
         </div>
-    </header>
+    </header> -->
+
+    <section id="projects-section">
+        <div class="project" data-details="Detailed explanation about Project 1.">
+            <h3>Project 1</h3>
+            <p>Stack: HTML, CSS, JavaScript</p>
+            <img src="assets/images/main_image.JPG" alt="Project 1 Screenshot" class="project-image">
+        </div>
+        <div class="project" data-details="Detailed explanation about Project 2.">
+            <h3>Project 2</h3>
+            <p>Stack: Python, Flask, SQLite</p>
+            <img src="assets/images/main_image.JPG" alt="Project 2 Screenshot" class="project-image">
+        </div>
+        <div class="project" data-details="Detailed explanation about Project 3.">
+            <h3>Project 3</h3>
+            <p>Stack: React, Node.js, MongoDB</p>
+            <!-- No image for this project -->
+        </div>
+    </section>
+
+    <div id="overlay">
+        <div id="details-box">
+            <button id="close-button">&times;</button>
+            <h2 id="details-title"></h2>
+            <p id="details-stack"></p>
+            <p id="details-description"></p>
+            <img id="details-image" alt="Detailed View" style="display: none;">
+        </div>
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>
