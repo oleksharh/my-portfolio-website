@@ -3,6 +3,7 @@
     --font-size-small: 1.25rem; /* 20px */
     --font-size-medium: 1.5rem; /* 24px */
     --font-size-large: 1.75rem; /* 28px */
+    --font-size-huge: 2.5rem;
     --main-bg-color: #fffffa;
     --main-text-color: #333333;
     --main-navbar-color: rgba(0, 0, 0, 0);
@@ -20,6 +21,7 @@
         --font-size-small: 1.25rem; /* 18px */
         --font-size-medium: 1.5rem; /* 20.5px */
         --font-size-large: 1.75rem; /* 24.5px */
+        --font-size-huge: 2.5rem;
     }
 }
 
@@ -29,5 +31,6 @@
         --font-size-small: 1.25rem; /* 15px */
         --font-size-medium: 1.5rem; /* 18px */
         --font-size-large: 1.75rem; /* 21px */
+        --font-size-huge: 2.5rem;
     }
 }

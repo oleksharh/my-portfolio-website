@@ -25,20 +25,6 @@
     <nav id="main-navbar" class="navbar navbar--main"></nav>
     <nav id="lower-navbar" class="navbar navbar--lower"></nav>
 
-
-
-
-    <!-- <header class="header">
-        <div class="header__hero">
-            <h1 class="header__hero-text">PROJECTS PAGE</h1>
-        </div>
-        <div class="header__separator"></div>
-        <div class="header__image">
-            <img class="header__image-content" src="assets/images/main_image.JPG"
-                alt="A profile picture of Alex Sharhorodskyi">
-        </div>
-    </header> -->
-
     <section id="projects-section">
         <div class="project" data-details="Detailed explanation about Project 1."
             data-link="https://github.com/oleksharh/Notify-Me-Bot">
@@ -52,19 +38,30 @@
             data-link="https://github.com/oleksharh/FileOrganizerApplication">
             <div>
                 <h3>File Organizer Application</h3>
-                <p>Stack: Python, Flask, SQLite</p>
+                <p>Stack: Python, PyQT5</p>
             </div>
             <img src="assets/images/file_organizer_preview.png" alt="FileOrganizerApplication" class="project-image">
         </div>
         <div class="project" data-details="Detailed explanation about Project 3."
             data-link="https://www.external-link-to-project3.com">
             <div>
-                <h3>Project 3</h3>
-                <p>Stack: React, Node.js, MongoDB</p>
+                <h3>DIY Streamer Deck</h3>
+                <p>Stack: C++</p>
                 <!-- No image for this project -->
             </div>
         </div>
     </section>
+
+
+    <div class="overlay" id="project-overlay">
+        <div class="overlay-content">
+            <button class="close-overlay">X</button>
+            <h3 id="overlay-title"></h3>
+            <p id="overlay-stack"></p>
+            <p id="overlay-details"></p>
+            <a id="overlay-link" href="#" target="_blank">View Project</a>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

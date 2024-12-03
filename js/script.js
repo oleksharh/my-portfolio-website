@@ -104,15 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.querySelectorAll('.project').forEach(project => {
-    project.addEventListener('click', function () {
-        const projectLink = project.getAttribute('data-link');
-        if (projectLink) {
-            window.open(projectLink, 'www.google.com');  // Open external link in a new tab
-        }
-    });
-});
+// document.querySelectorAll('.project').forEach(project => {
+//     project.addEventListener('click', function () {
+//         const projectLink = project.getAttribute('data-link');
+//         if (projectLink) {
+//             window.open(projectLink, 'www.google.com');  // Open external link in a new tab
+//         }
+//     });
+// });
 
+// Width of the project-section buttons(projects)
 window.addEventListener('load', function () {
     const projects = document.querySelectorAll('.project');
     let maxWidth = 0;
@@ -129,4 +130,61 @@ window.addEventListener('load', function () {
     projects.forEach(project => {
         project.style.width = `${maxWidth}px`;
     });
+});
+
+// adjustable 768px threshold
+let lastWidth = window.innerWidth;
+
+window.addEventListener('resize', function () {
+    const currentWidth = window.innerWidth;
+
+    if ((lastWidth > 768 && currentWidth <= 768) || (lastWidth <= 768 && currentWidth > 768)) {
+        location.reload(); // Reload the page
+    }
+
+    lastWidth = currentWidth;
+});
+
+
+
+
+// Overlay
+const projects = document.querySelectorAll('.project');
+const overlay = document.getElementById('project-overlay');
+const overlayTitle = document.getElementById('overlay-title');
+const overlayStack = document.getElementById('overlay-stack');
+const overlayDetails = document.getElementById('overlay-details');
+const overlayLink = document.getElementById('overlay-link');
+const closeOverlayButton = document.querySelector('.close-overlay');
+
+// Show overlay when a project is clicked
+projects.forEach(project => {
+    project.addEventListener('click', () => {
+        // Get data from the clicked project
+        const title = project.querySelector('h3').textContent;
+        const stack = project.querySelector('p').textContent;
+        const details = project.getAttribute('data-details');
+        const link = project.getAttribute('data-link');
+
+        // Populate overlay content
+        overlayTitle.textContent = title;
+        overlayStack.textContent = `Stack: ${stack}`;
+        overlayDetails.textContent = details;
+        overlayLink.href = link;
+
+        // Show the overlay
+        overlay.classList.add('active');
+    });
+});
+
+// Close overlay when close button is clicked
+closeOverlayButton.addEventListener('click', () => {
+    overlay.classList.remove('active');
+});
+
+// Optional: Close overlay when clicking outside content
+overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+        overlay.classList.remove('active');
+    }
 });

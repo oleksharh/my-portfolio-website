@@ -2,6 +2,8 @@
 @import 'components/header-section.css';
 @import 'components/variables.css';
 @import 'components/about-section.css';
+@import 'components/overlay.css';
+@import 'components/project-section.css';
 
 body {
     font-family: 'BebasNeue', sans-serif;

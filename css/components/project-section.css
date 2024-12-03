@@ -1,0 +1,65 @@
+@import './css/variables.css';
+
+/* Projects Section Styling */
+#projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow: hidden;
+    margin: 4rem 1rem 1rem 1rem;
+    height: auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    padding: 1rem;
+    width: auto;
+    outline: 2px solid var(--main-text-color);
+    transition: transform 0.2s;
+    cursor: pointer;
+    Flex-grow: 0; 
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project h3 {
+    margin: 0 0 10px;
+    font-size: var(--font-size-huge);
+    width: auto;
+}
+
+.project p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    width: auto;
+}
+
+.project div {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    max-width: 140px; /* Limit the maximum width */
+    max-height: 200px;
+    margin-left: 15px;
+}
+
+/* Media Query: When screen width is at least 768px (tablet and above) */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Switch to row layout on larger screens */
+    }
+
+    }
+
+
