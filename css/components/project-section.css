@@ -22,6 +22,11 @@
     transition: transform 0.2s;
     cursor: pointer;
     Flex-grow: 0;
+
+    text-decoration: none;
+    color: inherit; /* Inherits the current text color of the parent */
+    font-weight: inherit; /* Ensures the font weight matches the body text */
+    font-size: inherit; /* Ensures font size matches the body text */
 }
 
 .project:hover {

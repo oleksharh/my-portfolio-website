@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="overlay">
     <template id="navbar-template">
         <ul class="navbar__links">
             <li><a href="index.html">Home</a></li>
@@ -23,33 +23,33 @@
     </template>
 
     <nav id="main-navbar" class="navbar navbar--main"></nav>
-
+    <nav id="lower-navbar" class="navbar navbar--lower"></nav>
 
     <section id="projects-section">
-        <a class="project" data-details="Detailed explanation about Project 1."
-            href="projects_detailed.html?name=notify-me-bot">
+        <div class="project">
             <div>
                 <h3>Notify Me Telegram Bot</h3>
                 <p>Stack: Python, MongoDB, AWS</p>
             </div>
             <img src="assets/images/notify-me-bot-avatar.jpg" alt="NotifyMeBotAvatar" class="project-image">
-        </a>
-        <a class="project" data-details="Detailed explanation about Project 2." href="projects_detailed.html">
+        </div>
+        <div class="project">
             <div>
                 <h3>File Organizer Application</h3>
                 <p>Stack: Python, PyQT5</p>
             </div>
             <img src="assets/images/file_organizer_preview.png" alt="FileOrganizerApplication" class="project-image">
-        </a>
-        <a class="project" data-details="Detailed explanation about Project 3." href="projects_detailed.html">
+        </div>
+        <div class="project">
             <div>
                 <h3>DIY Streamer Deck</h3>
                 <p>Stack: C++</p>
                 <!-- No image for this project -->
             </div>
-        </a>
+        </div>
     </section>
-    <nav id="lower-navbar" class="navbar navbar--lower"></nav>
+
+
 
     <script src="js/script.js"></script>
 </body>
