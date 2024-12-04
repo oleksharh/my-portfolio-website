@@ -21,7 +21,7 @@
     outline: 2px solid var(--main-text-color);
     transition: transform 0.2s;
     cursor: pointer;
-    Flex-grow: 0; 
+    Flex-grow: 0;
 }
 
 .project:hover {
