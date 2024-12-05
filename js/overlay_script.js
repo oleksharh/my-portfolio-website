@@ -9,27 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('dark_mode');
     }
 
-    // Function to handle theme toggle
-    function toggleTheme(themeToggler) {
-        themeToggler.addEventListener('click', () => {
-            document.body.classList.toggle('dark_mode');
-            const currentTheme = document.body.classList.contains('dark_mode') ? 'dark' : 'light';
-            localStorage.setItem('theme', currentTheme);
-        });
-    }
-
-    // Assuming theme togglers exist, initialize them
-    const themeTogglerMain = document.getElementById('theme-toggler-main');
-    const themeTogglerLower = document.getElementById('theme-toggler-lower');
-
-    if (themeTogglerMain) {
-        toggleTheme(themeTogglerMain);
-    }
-
-    if (themeTogglerLower) {
-        toggleTheme(themeTogglerLower);
-    }
-
     // Remove preloader and apply 'loaded' state after a slight delay
     setTimeout(() => {
         document.body.classList.remove("preload");
@@ -40,7 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (preloader) {
             preloader.remove();
         }
-    }, 50); // Adjust delay as needed
+    }, 50);
+});
+
+const overlay = document.getElementById('overlay');
+
+overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+        history.back();
+    }
 });
 
 function closeOverlay() {
