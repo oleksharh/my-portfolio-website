@@ -5,6 +5,8 @@
 @import 'components/overlay.css';
 @import 'components/project-section.css';
 
+
+
 body {
     font-family: 'BebasNeue', sans-serif;
     color: var(--main-text-color);
@@ -13,7 +15,6 @@ body {
     padding-bottom: 4rem;
     box-sizing: border-box;
 }
-
 
 ul {
     display: flex;      /* Makes the list a flex container */

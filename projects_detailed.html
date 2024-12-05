@@ -8,44 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-    <template id="navbar-template">
-        <ul class="navbar__links">
-            <li><a>Home</a></li>
-            <li><a>Interests</a></li>
-            <li><a class="muted">Projects</a></li>
-            <li>
-                <button class="navbar__theme-toggler" aria-label="Toggle theme">
-                    THEME
-                </button>
-            </li>
-        </ul>
-    </template>
-
-    <nav id="main-navbar" class="navbar navbar--main"></nav>
-    <nav id="lower-navbar" class="navbar navbar--lower"></nav>
-
-    <section id="projects-section">
-        <div class="project">
-            <div>
-                <h3>Notify Me Telegram Bot</h3>
-                <p>Stack: Python, MongoDB, AWS</p>
-            </div>
-        </div>
-        <div class="project">
-            <div>
-                <h3>File Organizer Application</h3>
-                <p>Stack: Python, PyQT5</p>
-            </div>
-        </div>
-        <div class="project">
-            <div>
-                <h3>DIY Streamer Deck</h3>
-                <p>Stack: C++</p>
-                <!-- No image for this project -->
-            </div>
-        </div>
-    </section>
+<body class="preload">
 
     <div class="overlay">
         <section class="project-overlay-section">
@@ -64,8 +27,11 @@
         </section>
     </div>
 
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/overlay_script.js"></script>
 </body>
 
 </html>

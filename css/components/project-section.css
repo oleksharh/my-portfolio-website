@@ -81,6 +81,7 @@
     width: auto;
     outline: 2px solid var(--main-text-color);
     Flex-grow: 0;
+    background-color: var(--main-bg-color);
 
     text-decoration: none;
     color: inherit; /* Inherits the current text color of the parent */

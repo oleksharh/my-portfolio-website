@@ -89,7 +89,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll(".navbar__links a");
     console.log(navLinks);
 
+    const images = document.querySelectorAll('img');
 
+    images.forEach(image => {
+        // Ensure the images are loaded before applying the transition
+        if (image.complete) {
+            image.classList.add('loaded');
+        } else {
+            image.addEventListener('load', () => {
+                image.classList.add('loaded');
+            });
+        }
+    });
+
+    setTimeout(() => {
+        document.body.classList.remove("preload");
+        document.body.classList.add("loaded");
+
+        // Remove preloader from DOM if needed
+        const preloader = document.querySelector(".preloader");
+        if (preloader) {
+            preloader.remove();
+        }
+    }, 50);
 });
 
 
@@ -196,3 +218,5 @@ overlay.addEventListener('click', (event) => {
 function closeOverlay() {
     history.back(); // Navigates back to the previous page in the browser history
 }
+
+
