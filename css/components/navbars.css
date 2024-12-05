@@ -55,10 +55,12 @@
   .navbar__links a.muted{
     color: var(--main-text-color);
     opacity: 30%;
+    pointer-events: none;
   } 
 
   .navbar__links a.muted:hover {
     transform: none !important;
+    pointer-events: none;
   }
 
   li a{
