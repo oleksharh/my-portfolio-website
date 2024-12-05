@@ -9,13 +9,11 @@
 </head>
 
 <body>
-
-
     <template id="navbar-template">
         <ul class="navbar__links">
             <li><a>Home</a></li>
             <li><a>Interests</a></li>
-            <li><a>Projects</a></li>
+            <li><a class="muted">Projects</a></li>
             <li>
                 <button class="navbar__theme-toggler" aria-label="Toggle theme">
                     THEME
@@ -33,14 +31,12 @@
                 <h3>Notify Me Telegram Bot</h3>
                 <p>Stack: Python, MongoDB, AWS</p>
             </div>
-            <img src="assets/images/notify-me-bot-avatar.jpg" alt="NotifyMeBotAvatar" class="project-image">
         </div>
         <div class="project">
             <div>
                 <h3>File Organizer Application</h3>
                 <p>Stack: Python, PyQT5</p>
             </div>
-            <img src="assets/images/file_organizer_preview.png" alt="FileOrganizerApplication" class="project-image">
         </div>
         <div class="project">
             <div>
@@ -51,7 +47,23 @@
         </div>
     </section>
 
-    <div class="overlay"></div>
+    <div class="overlay">
+        <section class="project-overlay-section">
+            <div class="project-overlay">
+                <button class="close-button" onclick="closeOverlay()">X</button>
+                <div>
+                    <h3>Notify Me Telegram Bot</h3>
+                    <p>Stack: Python, MongoDB, AWS</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita maxime delectus non
+                        aperiam,<br>
+                        ipsam voluptatem minima, excepturi alias rem at temporibus! Laudantium quaerat quo
+                        consectetur<br>
+                        doloribus, quas quasi dolor provident!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>

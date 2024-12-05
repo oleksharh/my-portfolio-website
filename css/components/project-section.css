@@ -34,13 +34,13 @@
 }
 
 .project h3 {
-    margin: 0 0 10px;
+    margin: 0 0 5px;
     font-size: var(--font-size-huge);
     width: auto;
+    white-space: nowrap;
 }
 
 .project p {
-    margin: 0 0 10px;
     font-size: 14px;
     width: auto;
 }
@@ -51,13 +51,6 @@
     width: auto;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-    max-width: 140px; /* Limit the maximum width */
-    max-height: 200px;
-    margin-left: 15px;
-}
 
 /* Media Query: When screen width is at least 768px (tablet and above) */
 @media (max-width: 768px) {
@@ -68,3 +61,72 @@
     }
 
 
+.project-overlay-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow: hidden;
+    /* margin: 4rem 1rem 1rem 1rem; */
+    height: auto;
+}
+
+.project-overlay {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    padding: 1rem;
+    width: auto;
+    outline: 2px solid var(--main-text-color);
+    Flex-grow: 0;
+
+    text-decoration: none;
+    color: inherit; /* Inherits the current text color of the parent */
+    font-weight: inherit; /* Ensures the font weight matches the body text */
+    font-size: inherit; /* Ensures font size matches the body text */
+}
+
+
+.project-overlay h3 {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bolder;
+    margin: 0 0 10px;
+    font-size: var(--font-size-huge);
+    width: auto;
+}
+
+
+.project-overlay p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    width: auto;
+}
+
+.project-overlay div {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+
+.close-button {
+    position: absolute; 
+    top: 1rem;
+    right: 1rem; 
+    padding: 5px 10px 5px 10px;
+    background: none; 
+    border: none; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--main-text-color);
+    cursor: pointer; 
+    z-index: 10; 
+    outline: 2px solid var(--main-text-color);
+}
+
+.close-button:hover {
+    color: red; 
+}

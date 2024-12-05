@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll(".navbar__links a");
     console.log(navLinks);
 
+
 });
 
 
@@ -191,3 +192,7 @@ overlay.addEventListener('click', (event) => {
 //         overlay.classList.add('active');
 //     });
 // });
+
+function closeOverlay() {
+    history.back(); // Navigates back to the previous page in the browser history
+}
