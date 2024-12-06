@@ -89,6 +89,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll(".navbar__links a");
     console.log(navLinks);
 
+    const images = document.querySelectorAll('img');
+
+    images.forEach(image => {
+        // Ensure the images are loaded before applying the transition
+        if (image.complete) {
+            image.classList.add('loaded');
+        } else {
+            image.addEventListener('load', () => {
+                image.classList.add('loaded');
+            });
+        }
+    });
+
+    setTimeout(() => {
+        document.body.classList.remove("preload");
+        document.body.classList.add("loaded");
+
+        // Remove preloader from DOM if needed
+        const preloader = document.querySelector(".preloader");
+        if (preloader) {
+            preloader.remove();
+        }
+    }, 50);
 });
 
 
@@ -126,43 +149,3 @@ window.addEventListener('resize', function () {
 
 
 
-// Overlay
-const projects = document.querySelectorAll('.project');
-const overlay = document.getElementById('project-overlay');
-const overlayTitle = document.getElementById('overlay-title');
-const overlayStack = document.getElementById('overlay-stack');
-const overlayDetails = document.getElementById('overlay-details');
-const overlayLink = document.getElementById('overlay-link');
-const closeOverlayButton = document.querySelector('.close-overlay');
-
-// Show overlay when a project is clicked
-projects.forEach(project => {
-    project.addEventListener('click', () => {
-        // Get data from the clicked project
-        const title = project.querySelector('h3').textContent;
-        const stack = project.querySelector('p').textContent;
-        const details = project.getAttribute('data-details');
-        const link = project.getAttribute('data-link');
-
-        // Populate overlay content
-        overlayTitle.textContent = title;
-        overlayStack.textContent = `Stack: ${stack}`;
-        overlayDetails.textContent = details;
-        overlayLink.href = link;
-
-        // Show the overlay
-        overlay.classList.add('active');
-    });
-});
-
-// Close overlay when close button is clicked
-closeOverlayButton.addEventListener('click', () => {
-    overlay.classList.remove('active');
-});
-
-// Optional: Close overlay when clicking outside content
-overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) {
-        overlay.classList.remove('active');
-    }
-});

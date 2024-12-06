@@ -1,5 +1,25 @@
 @import './css/variables.css';
 
+/* General Styling for Project Sections */
+.project, .project-detailed {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    width: auto;
+    outline: 2px solid var(--main-text-color);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit; /* Inherits the current text color of the parent */
+    font-weight: inherit; /* Ensures the font weight matches the body text */
+    font-size: inherit; /* Ensures font size matches the body text */
+    transition: transform 0.2s;
+}
+
+.project-detailed {
+    position: relative;
+}
+
 /* Projects Section Styling */
 #projects-section {
     display: flex;
@@ -12,54 +32,55 @@
     height: auto;
 }
 
-.project {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem;
-    padding: 1rem;
-    width: auto;
-    outline: 2px solid var(--main-text-color);
-    transition: transform 0.2s;
-    cursor: pointer;
-    Flex-grow: 0; 
-}
-
 .project:hover {
     transform: scale(1.05);
 }
 
-.project h3 {
-    margin: 0 0 10px;
+/* Project Header Styling */
+.project h3, .project-detailed h3 {
+    margin: 0 0 5px;
     font-size: var(--font-size-huge);
     width: auto;
+    white-space: nowrap;
 }
 
-.project p {
-    margin: 0 0 10px;
+.project p, .project-detailed p {
     font-size: 14px;
     width: auto;
 }
 
-.project div {
+.project-detailed p {
+    margin: 0 0 10px;
+}
+
+.project div, .project-detailed div {
     display: flex;
     flex-direction: column;
     width: auto;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-    max-width: 140px; /* Limit the maximum width */
-    max-height: 200px;
-    margin-left: 15px;
+/* Detailed Project Styling */
+.project-detailed {
+    background-color: var(--main-bg-color);
+    flex-direction: row; /* Ensure horizontal layout */
 }
 
-/* Media Query: When screen width is at least 768px (tablet and above) */
-@media (max-width: 768px) {
-    .project {
-        flex-direction: column; /* Switch to row layout on larger screens */
-    }
+/* Close Button Styling */
+.close-detailed {
+    position: absolute; 
+    top: 1rem;
+    right: 1rem; 
+    padding: 5px 10px;
+    background: none; 
+    border: none; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--main-text-color);
+    cursor: pointer; 
+    z-index: 10; 
+    outline: 2px solid var(--main-text-color);
+}
 
-    }
-
-
+.close-detailed:hover {
+    color: red; 
+}
