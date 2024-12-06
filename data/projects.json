@@ -1,0 +1,20 @@
+{
+    "notify-me-bot": {
+        "title": "Notify Me Telegram Bot",
+        "stack": "Python, MongoDB, AWS",
+        "description": "A Telegram bot to send scheduled reminders with persistent storage in MongoDB and hosted on AWS.",
+        "url": "projects_detailed.html?title=notify-me-bot"
+    },
+    "file-organizer-application": {
+        "title": "File Organizer Application",
+        "stack": "Python, PyQT5",
+        "description": "An application to organize files by type and date with a user-friendly GUI built in PyQT5.",
+        "url": "projects_detailed.html?title=file-organizer-application"
+    },
+    "diy-streamer-deck": {
+        "title": "DIY Streamer Deck",
+        "stack": "C++",
+        "description": "",
+        "url": "projects_detailed.html?title=diy-streamer-deck"
+    }
+}

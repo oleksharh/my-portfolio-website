@@ -1,6 +1,6 @@
 "use strict"
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
 
     // Fetch and append the template content to both navbars
     const templateContent = document.querySelector('#navbar-template').content;
@@ -82,9 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleTheme(themeTogglerMain);
     toggleTheme(themeTogglerLower);
 
-    // Get the current page from the URL
-    const currentPage = window.location.pathname.split("/").pop(); // e.g., "index.html"
-
     // Select navbar links AFTER appending template content
     const navLinks = document.querySelectorAll(".navbar__links a");
     console.log(navLinks);
@@ -102,21 +99,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Populating projects
+    const projectsSection = document.getElementById("projects-section");
+    const projectTemplate = document.getElementById("project-template");
+
+    try {
+        // Fetch the JSON data
+        const response = await fetch("data/projects.json");
+        if (!response.ok) {
+            throw new Error("Failed to fetch project data");
+        }
+        const projects = await response.json();
+
+        console.log(projects);
+
+        // Loop through each project and populate the template
+        Object.values(projects).forEach(project => {
+            const clone = projectTemplate.content.cloneNode(true);
+            const link = clone.querySelector("a");
+            const title = clone.querySelector("h3");
+            const stack = clone.querySelector("p");
+
+            // Populate the template with data
+            link.href = project.url;
+            title.textContent = project.title;
+            stack.textContent = `Stack: ${project.stack}`;
+
+            // Append the populated template to the section
+            projectsSection.appendChild(clone);
+        });
+    } catch (error) {
+        console.error("Error loading projects:", error);
+    }
+
+
     setTimeout(() => {
+        // Remove "preload" class and add "loaded" class
         document.body.classList.remove("preload");
         document.body.classList.add("loaded");
 
-        // Remove preloader from DOM if needed
+        // Remove the preloader element
         const preloader = document.querySelector(".preloader");
         if (preloader) {
             preloader.remove();
         }
+
+        adjustProjectWidth();
     }, 50);
+
 });
 
 
-// Width of the project-section buttons(projects)
-window.addEventListener('load', function () {
+function adjustProjectWidth() {
     const projects = document.querySelectorAll('.project');
     let maxWidth = 0;
 
@@ -132,7 +166,7 @@ window.addEventListener('load', function () {
     projects.forEach(project => {
         project.style.width = `${maxWidth}px`;
     });
-});
+}
 
 // adjustable 768px threshold
 let lastWidth = window.innerWidth;
@@ -146,6 +180,3 @@ window.addEventListener('resize', function () {
 
     lastWidth = currentWidth;
 });
-
-
-

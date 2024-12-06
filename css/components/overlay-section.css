@@ -1,3 +1,6 @@
+@import 'project-section.css';
+@import '../variables.css';
+
 .overlay {
     display: flex;
     align-items: center;
@@ -9,4 +12,25 @@
     height: 100%;
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+}
+
+/* Close Button Styling */
+.close-detailed {
+    align-self: flex-start;
+    /* position: a  bsolute;  */
+    top: 1rem;
+    right: 1rem; 
+    padding: 5px 10px;
+    background: none; 
+    border: none; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--main-text-color);
+    cursor: pointer; 
+    z-index: 10; 
+    outline: 2px solid var(--main-text-color);
+}
+
+.close-detailed:hover {
+    color: red; 
 }
