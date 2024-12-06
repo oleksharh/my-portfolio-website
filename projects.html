@@ -26,27 +26,14 @@
     <nav id="lower-navbar" class="navbar navbar--lower"></nav>
 
     <section id="projects-section">
-        <a class="project" data-details="Detailed explanation about Project 1."
-            href="projects_detailed.html?name=notify-me-bot">
-            <div>
-                <h3>Notify Me Telegram Bot</h3>
-                <p>Stack: Python, MongoDB, AWS</p>
-            </div>
-        </a>
-        <a class="project" data-details="Detailed explanation about Project 2."
-            href="projects_detailed.html?name=file-organizer-application">
-            <div>
-                <h3>File Organizer Application</h3>
-                <p>Stack: Python, PyQT5</p>
-            </div>
-        </a>
-        <a class="project" data-details="Detailed explanation about Project 3."
-            href="projects_detailed.html?name=diy-streamer-deck">
-            <div>
-                <h3>DIY Streamer Deck</h3>
-                <p>Stack: C++</p>
-            </div>
-        </a>
+        <template id="project-template">
+            <a class="project" href="">
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </a>
+        </template>
     </section>
 
     <div class="preloader">

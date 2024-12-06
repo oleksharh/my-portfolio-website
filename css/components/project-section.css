@@ -62,25 +62,6 @@
 /* Detailed Project Styling */
 .project-detailed {
     background-color: var(--main-bg-color);
-    flex-direction: row; /* Ensure horizontal layout */
-}
-
-/* Close Button Styling */
-.close-detailed {
-    position: absolute; 
-    top: 1rem;
-    right: 1rem; 
-    padding: 5px 10px;
-    background: none; 
-    border: none; 
-    font-size: 24px; 
-    font-weight: bold; 
-    color: var(--main-text-color);
-    cursor: pointer; 
-    z-index: 10; 
-    outline: 2px solid var(--main-text-color);
-}
-
-.close-detailed:hover {
-    color: red; 
+    flex-direction: row;
+    gap: 1rem;
 }
