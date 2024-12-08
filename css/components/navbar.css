@@ -1,0 +1,17 @@
+/* Lower navbar default state */
+.navbar--lower {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%); /* Start hidden below the viewport */
+    transition: transform 0.3s ease;
+    background-color: var(--background-color);
+    border-top: 2px solid var(--border-color);
+    z-index: 100;
+}
+
+/* Lower navbar visible state */
+.navbar--lower.visible {
+    transform: translateY(0); /* Slide up into view */
+} 

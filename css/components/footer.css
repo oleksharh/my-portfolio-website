@@ -1,0 +1,62 @@
+/* Main footer container with flex layout */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-color);
+    /* Ensures proper stacking context */
+    position: relative;
+    /* Keeps footer below the lower navbar which has higher z-index */
+    z-index: 1;
+}
+
+/* Copyright text styling */
+.footer__text {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: var(--main-font);
+}
+
+/* Container for footer links */
+.footer__links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual footer link styling */
+.footer__link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: var(--nav-link-size);
+    /* Smooth transform animation on hover */
+    transition: .2s transform ease-in-out;
+    font-family: var(--main-font);
+}
+
+/* Scale up effect on link hover */
+.footer__link:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        /* Stack elements vertically on mobile */
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        /* Increase top margin on mobile for better spacing */
+        margin-top: 6rem;
+    }
+
+    /* Adjust link spacing for mobile */
+    .footer__links {
+        gap: 1.5rem;
+    }
+} 
