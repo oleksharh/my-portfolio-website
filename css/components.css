@@ -4,6 +4,7 @@
 @import 'components/about-section.css';
 @import 'components/project-section.css';
 @import 'components/overlay-section.css';
+@import 'components/page-wrapper.css';
 
 
 body {

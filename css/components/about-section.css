@@ -1,16 +1,16 @@
 .about-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Ensure content sticks to the top */
     padding: 10px;
-    margin: 1rem;  /* Adjust top margin to 5rem */
+    margin: 1rem;
     box-sizing: border-box;
-    flex-direction: column;
+    height: auto; /* Ensure it adapts to content size */
+    flex: 1;
+    
 }
 
 .about-section__text {
     font-weight: 100;
-}
-
-.about-section__header {
-    padding-bottom: 0.8rem;
 }

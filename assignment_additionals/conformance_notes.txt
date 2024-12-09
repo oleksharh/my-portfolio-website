@@ -1,4 +1,6 @@
-On the Projects Page tabbing is not activated on div elements as they don't act as buttons and this will need to be reworked and this functionality needs to be added for accessible design;
-Text contrast is shown on both navbars as the error, though it's because the bg transparent and it seems as if it's a conformance error, will look into that;
-And on the projects page h3 is used on the div classed as project elements, and not h1, or h2, so this needs to be investigated further;
-On the image named "projects_page_h3_error_missing.png" h3 is missing, but this is due to overlay being not active and not an actual issue with the condormance and etc.
+1) On the Projects Page tabbing is not activated on div elements as they don't act as buttons and this will need to be reworked and this functionality needs to be added for accessible design;
+2) Text contrast is shown on both navbars as the error, though it's because the bg transparent and it seems as if it's a conformance error, will look into that;
+3) And on the projects page h3 is used on the div classed as project elements, and not h1, or h2, so this needs to be investigated further;
+4) On the image named "projects_page_h3_error_missing.png" h3 is missing, but this is due to overlay being not active and not an actual issue with the condormance and etc.
+5) Footer is not aligned to the botom and proper margin is not used between lower navbar and footer decreasing user accessibility
+6) Missing links in the footer

@@ -3,10 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    margin-top: 4rem;
-    border: 2px solid var(--border-color);
-    background-color: var(--background-color);
+    padding: 1vh 2vw;
+    outline: 2px solid var(--main-text-color);
+    background-color: var(--main-bg-color);
+    font-size: var(--font-size-medium);
     /* Ensures proper stacking context */
     position: relative;
     /* Keeps footer below the lower navbar which has higher z-index */
@@ -15,9 +15,7 @@
 
 /* Copyright text styling */
 .footer__text {
-    font-size: 1rem;
-    color: var(--text-color);
-    font-family: var(--main-font);
+    color: var(--main-text-color);
 }
 
 /* Container for footer links */
@@ -30,12 +28,10 @@
 
 /* Individual footer link styling */
 .footer__link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: var(--nav-link-size);
+    text-decoration: none !important;
+    color: var(--main-text-color);
     /* Smooth transform animation on hover */
     transition: .2s transform ease-in-out;
-    font-family: var(--main-font);
 }
 
 /* Scale up effect on link hover */
