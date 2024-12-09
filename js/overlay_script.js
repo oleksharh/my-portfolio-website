@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 document.addEventListener('DOMContentLoaded', () => {
     // Theme toggle functionality

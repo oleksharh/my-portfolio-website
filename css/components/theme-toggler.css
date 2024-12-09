@@ -1,7 +1,7 @@
 @import '../variables.css';
 
 /* Styling for the theme toggle button */
-.navbar__theme-toggler   {
+.navbar-theme-toggler   {
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
@@ -17,6 +17,6 @@
 }
 
 /* Hover effect for theme button */
-.navbar__theme-toggler:hover {
+.navbar-theme-toggler:hover {
     transform: scale(1.2);
 }
