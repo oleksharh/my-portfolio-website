@@ -2,64 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
 
-    // Fetch and append the template content to both navbars
-    const templateContent = document.querySelector('#navbar-template').content;
+    const mainNavbar = document.getElementById('navbar');
 
-    const mainNavbar = document.getElementById('main-navbar');
-    const lowerNavbar = document.getElementById('lower-navbar');
+    const themeToggler = document.getElementById('theme-toggler');
 
-    if (mainNavbar) {
-        const mainNavbarContent = templateContent.cloneNode(true);
-        const mainThemeToggler = mainNavbarContent.querySelector('.navbar__theme-toggler');
-        mainThemeToggler.id = 'theme-toggler-main'; // Assign a unique ID
-        mainNavbar.appendChild(mainNavbarContent);
-    }
-
-    if (lowerNavbar) {
-        const lowerNavbarContent = templateContent.cloneNode(true);
-        const lowerThemeToggler = lowerNavbarContent.querySelector('.navbar__theme-toggler');
-        lowerThemeToggler.id = 'theme-toggler-lower'; // Assign a unique ID
-        lowerNavbar.appendChild(lowerNavbarContent);
-    }
-
-    // Fetch the theme togglers after appending the content
-    const themeTogglerMain = document.getElementById('theme-toggler-main');
-    const themeTogglerLower = document.getElementById('theme-toggler-lower');
-
-
-
-    // Check if the required elements exist in the DOM
-    if (!lowerNavbar || !themeTogglerMain || !themeTogglerLower) {
-        console.error('Required elements are missing from the DOM.');
-        return;
-    }
-
-    let lastScrollY = window.scrollY;
-    const threshold = 80;
-
-    lowerNavbar.classList.remove('visible');
-
-    // Throttled scroll event listener
-    let isThrottled = false;
-    const throttleDuration = 80;
-
-    window.addEventListener('scroll', () => {
-        if (isThrottled) return;
-
-        isThrottled = true;
-        setTimeout(() => {
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY > lastScrollY && currentScrollY > threshold) {
-                lowerNavbar.classList.add('visible');
-            } else if (currentScrollY <= threshold) {
-                lowerNavbar.classList.remove('visible');
-            }
-
-            lastScrollY = currentScrollY;
-            isThrottled = false;
-        }, throttleDuration);
-    });
 
     // Theme toggle function
     const savedTheme = localStorage.getItem('theme');
@@ -79,11 +25,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Initialize theme toggle for both main and lower navbar
-    toggleTheme(themeTogglerMain);
-    toggleTheme(themeTogglerLower);
+    toggleTheme(themeToggler);
 
     // Select navbar links AFTER appending template content
-    const navLinks = document.querySelectorAll(".navbar__links a");
+    const navLinks = document.querySelectorAll(".navbar-links a");
     console.log(navLinks);
 
     const images = document.querySelectorAll('img');
@@ -98,40 +43,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
     });
-
-    // Populating projects
-    const projectsSection = document.getElementById("projects-section");
-    const projectTemplate = document.getElementById("project-template");
-
-    try {
-        // Fetch the JSON data
-        const response = await fetch("data/projects.json");
-        if (!response.ok) {
-            throw new Error("Failed to fetch project data");
-        }
-        const projects = await response.json();
-
-        console.log(projects);
-
-        // Loop through each project and populate the template
-        Object.values(projects).forEach(project => {
-            const clone = projectTemplate.content.cloneNode(true);
-            const link = clone.querySelector("a");
-            const title = clone.querySelector("h3");
-            const stack = clone.querySelector("p");
-
-            // Populate the template with data
-            link.href = project.url;
-            title.textContent = project.title;
-            stack.textContent = `Stack: ${project.stack}`;
-
-            // Append the populated template to the section
-            projectsSection.appendChild(clone);
-        });
-    } catch (error) {
-        console.error("Error loading projects:", error);
-    }
-
 
     setTimeout(() => {
         // Remove "preload" class and add "loaded" class
@@ -168,15 +79,3 @@ function adjustProjectWidth() {
     });
 }
 
-// adjustable 768px threshold
-let lastWidth = window.innerWidth;
-
-window.addEventListener('resize', function () {
-    const currentWidth = window.innerWidth;
-
-    if ((lastWidth > 768 && currentWidth <= 768) || (lastWidth <= 768 && currentWidth > 768)) {
-        location.reload(); // Reload the page
-    }
-
-    lastWidth = currentWidth;
-});
