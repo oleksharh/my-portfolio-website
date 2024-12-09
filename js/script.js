@@ -55,27 +55,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             preloader.remove();
         }
 
-        adjustProjectWidth();
+
     }, 50);
 
 });
-
-
-function adjustProjectWidth() {
-    const projects = document.querySelectorAll('.project');
-    let maxWidth = 0;
-
-    // Find the maximum width of the projects
-    projects.forEach(project => {
-        const projectWidth = project.offsetWidth;
-        if (projectWidth > maxWidth) {
-            maxWidth = projectWidth;
-        }
-    });
-
-    // Apply the maximum width to all projects
-    projects.forEach(project => {
-        project.style.width = `${maxWidth}px`;
-    });
-}
 
