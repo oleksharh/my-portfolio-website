@@ -13,6 +13,7 @@ body {
     background-color: var(--main-bg-color);
     margin: 0;
     box-sizing: border-box;
+    transition: .2s background-color ease-in-out;
 }
 
 ul {

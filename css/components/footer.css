@@ -1,3 +1,4 @@
+@import '../variables.css';
 /* Main footer container with flex layout */
 .footer {
     display: flex;
@@ -5,7 +6,7 @@
     align-items: center;
     padding: 1vh 2vw;
     outline: 2px solid var(--main-text-color);
-    background-color: var(--main-bg-color);
+    backdrop-filter: blur(10px);
     font-size: var(--font-size-medium);
     /* Ensures proper stacking context */
     position: relative;
@@ -44,7 +45,7 @@
     .footer {
         /* Stack elements vertically on mobile */
         flex-direction: column;
-        gap: 1rem;
+        /* gap: 1rem; */
         text-align: center;
         /* Increase top margin on mobile for better spacing */
         margin-top: 6rem;

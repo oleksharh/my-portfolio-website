@@ -9,8 +9,6 @@
     cursor: pointer;
     transition: .2s transform ease-in-out;
     font-family: 'BebasNeue', sans-serif;
-    font-size: 1rem;
-    margin: 0 1rem;
     font-weight: bold;
     font-size: var(--font-size-medium);
     padding: 5px;

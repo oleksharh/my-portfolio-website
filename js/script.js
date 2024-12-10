@@ -2,8 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
 
-    const mainNavbar = document.getElementById('navbar');
-
     const themeToggler = document.getElementById('theme-toggler');
 
 

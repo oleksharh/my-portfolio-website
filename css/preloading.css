@@ -19,7 +19,10 @@ body.loaded{
     box-sizing: border-box;
     opacity: 1;
     overflow: auto;
-    transition: opacity 0.2s ease-in-out, visibility 0s;
+    transition: background-color 0.2s ease-in-out, 
+            color 0.2s ease-in-out, 
+            opacity 0.3s ease-in-out, 
+            visibility 0s ease-in-out;
 }
 
 
