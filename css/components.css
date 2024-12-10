@@ -1,7 +1,7 @@
 @import 'components/navbars.css';
 @import 'components/header-section.css';
-@import 'components/variables.css';
-@import 'components/about-section.css';
+@import './variables.css';
+@import 'components/text-section.css';
 @import 'components/project-section.css';
 @import 'components/overlay-section.css';
 @import 'components/page-wrapper.css';
