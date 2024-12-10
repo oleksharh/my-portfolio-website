@@ -1,106 +1,71 @@
 @import '../variable.css';
 
-/* .about-section {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-   /* align-items: flex-start; /* Align items to the left */
-    /*justify-content: flex-start; /* Ensure content sticks to the top */
-   /* padding: 10px;
-    margin: 1rem;
-    box-sizing: border-box;
-    height: auto; /* Ensure it adapts to content size */
-  /*  flex: 1;
-    
-}*/
-
-
-/* .about-section__header {
-    font-size: var(--font-size-huge);
-}
-
-.about-section__text {
-    line-height: 1.6; /* Line spacing for better readability */
-    /* margin-bottom: 1.5rem; /* Space between paragraphs */
-    /* text-align: justify; /* Optional: aligns the text to both left and right */
-
- /*
-
-/* 
-.about-section__text {
-    font-size: var(--font-size-small);
-}
-
-.about-section__text p {
-    margin: 0; /* Remove any default margin for <p> inside the text section */
-
-
-
 /* General styling for the about section */
-.about-section {
+.about-section, .programming-section, .modelling-section, .repairing-section {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    justify-content: flex-start; /* Ensure content sticks to the top */
-    padding: 1rem; /* More padding around content */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
     box-sizing: border-box;
-    height: auto; /* Ensure it adapts to content size */
+    height: auto;
     flex: 1;
     width: 60%;
     align-self: center;
     margin-bottom: 1rem;
 }
 
+.programming-section {
+    margin-top: 5rem;
+}
 /* Header styling */
-.about-section__header {
+.title-section {
     font-size: 5vw;
     align-self: center;
-    margin-bottom: 1rem; /* Space between header and text */
+    margin-bottom: 1rem;
 }
 
 /* Text block for each paragraph */
-.about-section__text {
+.text-section {
     display: flex;
     flex-direction: column;
-    text-align: justify; /* Aligns the text to both left and right */
+    text-align: justify;
     gap:  var(--font-size-large);
     font-size: var(--font-size-large);
-    line-height:  var(--font-size-large); /* Line spacing for better readability */
-    /* margin-bottom: 5rem; Space between paragraphs */
-    text-indent:  var(--font-size-large); /* Indent first line of each paragraph */
+    line-height:  var(--font-size-large);
+    text-indent:  var(--font-size-large);
 }
 
 
 @media (max-width: 1200px) {
-    .about-section {
+    .about-section, .programming-section, .modelling-section, .repairing-section {
         width: 70%;
         margin-bottom: 1rem;
         
     }
-    .about-section__text {
+    .text-section {
         gap:  var(--font-size-medium);
         font-size: var(--font-size-medium);
-        line-height:  var(--font-size-medium); /* Line spacing for better readability */
-        /* margin-bottom: 5rem; Space between paragraphs */
-        text-indent:  var(--font-size-medium); /* Indent first line of each paragraph */
+        line-height:  var(--font-size-medium);
+        text-indent:  var(--font-size-medium);
     }
 }
 
 @media (max-width: 1024px) {
-    .about-section {
+    .about-section, .programming-section, .modelling-section, .repairing-section {
         width: 80%;
         margin-bottom: 1rem;
     }
-    .about-section__text {
+    .text-section {
         gap:  var(--font-size-small);
         font-size: var(--font-size-small);
-        line-height:  var(--font-size-small); /* Line spacing for better readability */
-        /* margin-bottom: 5rem; Space between paragraphs */
-        text-indent:  var(--font-size-small); /* Indent first line of each paragraph */
+        line-height:  var(--font-size-small);
+        text-indent:  var(--font-size-small);
     }
 }
 
 @media (max-width: 768px) {
-    .about-section {
+    .about-section, .programming-section, .modelling-section, .repairing-section {
         width: 90%;
         margin-bottom: 0rem;
     }
