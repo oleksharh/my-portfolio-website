@@ -14,7 +14,7 @@
     margin: 1rem;
     display: flex;
     flex-direction: column;
-    text-align: start;
+    justify-content: center;
   }
   
   .header__hero-text {
