@@ -12,9 +12,9 @@
   .header__hero {
     flex: 1; /* Take up available space */
     margin: 1rem;
-    align-items: flex-start;
-    align-items: center;
     display: flex;
+    flex-direction: column;
+    text-align: start;
   }
   
   .header__hero-text {
