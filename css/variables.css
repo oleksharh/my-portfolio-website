@@ -34,3 +34,15 @@
         --font-size-huge: 2.5rem;
     }
 }
+
+.dark_mode_toggle{
+    --main-bg-color: #333333;
+    --main-text-color: #fffffa;
+    --main-navbar-color: rgba(0, 0, 0, 0);
+}
+
+.light_mode_toggle{
+    --main-bg-color: #fffffa;
+    --main-text-color: #333333;
+    --main-navbar-color: rgba(0, 0, 0, 0);
+}

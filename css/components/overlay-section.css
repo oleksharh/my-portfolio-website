@@ -14,8 +14,9 @@
     background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
 }
 
+
 /* Close Button Styling */
-.close-detailed {
+.close-detailed{
     align-self: flex-start;
     /* position: a  bsolute;  */
     top: 1rem;
@@ -29,8 +30,9 @@
     cursor: pointer; 
     z-index: 10; 
     outline: 2px solid var(--main-text-color);
+    transition: .2s transform ease-in-out
 }
 
 .close-detailed:hover {
-    color: red; 
+    transform: scale(1.2); 
 }

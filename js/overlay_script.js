@@ -48,9 +48,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         const projectContainer = document.querySelector(".project-detailed");
 
         if (projectDetails) {
-            projectContainer.querySelector("h3").textContent = projectDetails.title;
+            projectContainer.querySelector("a").innerHTML = projectDetails.title + ' &#8599;';
+            projectContainer.querySelector("a").href = projectDetails.href;
             projectContainer.querySelector("p:nth-of-type(1)").textContent = `Stack: ${projectDetails.stack}`;
-            projectContainer.querySelector("p:nth-of-type(2)").textContent = `Detailed Description: ${projectDetails.description}`;
+            projectContainer.querySelector("p:nth-of-type(2)").textContent = `Description: ${projectDetails.description}`;
         }
     } catch (error) {
         console.error("Error fetching project data:", error);

@@ -1,20 +1,30 @@
 {
     "notify-me-bot": {
         "title": "Notify Me Telegram Bot",
+        "href": "https://github.com/oleksharh/Notify-Me-Bot",
         "stack": "Python, MongoDB, AWS",
         "description": "A Telegram bot to send scheduled reminders with persistent storage in MongoDB and hosted on AWS.",
         "url": "projects_detailed.html?title=notify-me-bot"
     },
     "file-organizer-application": {
         "title": "File Organizer Application",
+        "href": "https://github.com/oleksharh/FileOrganizerApplication",
         "stack": "Python, PyQT5",
         "description": "An application to organize files by type and date with a user-friendly GUI built in PyQT5.",
         "url": "projects_detailed.html?title=file-organizer-application"
     },
     "diy-streamer-deck": {
         "title": "DIY Streamer Deck",
+        "href": "https://github.com/oleksharh/DIY_Stream_Deck",
         "stack": "C++",
         "description": "",
         "url": "projects_detailed.html?title=diy-streamer-deck"
+    },
+    "portfolio-website": {
+        "title": "Portfolio WebSite",
+        "href": "https://github.com/oleksharh/my-portfolio-website",
+        "stack": "HTML, CSS, JavaScript",
+        "description": "",
+        "url": "projects_detailed.html?title=portfolio-website"
     }
 }

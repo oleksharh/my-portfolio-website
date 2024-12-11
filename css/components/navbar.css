@@ -34,7 +34,7 @@
 
 .navbar-links a.muted{
   color: var(--main-text-color);
-  opacity: 30%;
+  opacity: 50%;
   pointer-events: none;
 } 
 
